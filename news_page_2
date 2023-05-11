@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<title>News & Awards - HRB Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<div class="content"><span class="image"><img src="images/lehigh_logo_small.png" alt="" /></span></div>
+									<ul class="icons">
+										<li><a href="https://www.researchgate.net/profile/Lucy-Napper" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
+										<li><a href="https://scholar.google.com/citations?user=Rl9LEIEAAAAJ&hl=en" class="icon solid fa-user-graduate"><span class="label">Google Scholar</span></a></li>
+										<li><a href="https://github.com/hrblab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										</ul>
+										</li>
+										</section>
+									</ul>
+								</header>
+
+							<!-- Content -->
+							<section>
+								<header class="major">
+									<h2>News & Awards</h2>
+								</header>
+								
+								<div class="row">
+									<div class="content">
+										
+										<<h4>....</h4>
+										<ul>
+											<li>xx</li>
+										</ul>
+										
+										
+										<h4>Fall 2014</h4>
+										<ul>
+											<li><b>Dr. Lucy Napper</b> joined Lehigh University. She is the first new hire into the Community Health cluster. Read more at https://www2.lehigh.edu/news/promoting-healthy-behaviors</li>
+										</ul>
+										
+										<ul class="pagination">
+														<li><span class="button disabled">Prev</span></li>
+														<li><a href="#" class="page">1</a></li>
+														<li><a href="#" class="page active">2</a></li>
+														<li><a href="#" class="page">3</a></li>
+														<li><span>&hellip;</span></li>
+														<li><a href="#" class="page">8</a></li>
+														<li><a href="#" class="page">9</a></li>
+														<li><a href="#" class="page">10</a></li>
+														<li><a href="#" class="button">Next</a></li>
+													</ul>
+										
+									</div>
+								</div>
+	
+						</div>
+					</div>
+			</section>
+
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li>
+											<span class="opener">Who We Are</span>
+											<ul>
+												<li><a href="lab-director.html">Lab Director</a></li>
+												<li><a href="the-team.html">The Team</a></li>
+												<li><a href="alumni.html">Alumni</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Research</span>
+											<ul>
+												<li><a href="our-approach.html">Our Approach</a></li>		
+												<li><a href="projects.html">Projects</a></li>
+												<li><a href="publications.html">Publications</a></li>
+											</ul>
+										</li>
+										<li><a href="news.html">News & Awards</a></li>
+										<li><a href="participate.html">Participate</a></li>
+										<li><a href="join.html">Join Us</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>Dr. Napper's office is located at Chandler-Ullmann.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">Lucy.Napper@lehigh.edu</a></li>
+										<li class="icon solid fa-phone">(610) 758-4689</li>
+										<li class="icon solid fa-home">Chandler-Ullmann Hall, Room 107<br />
+										Lehigh University<br />
+										17 Memorial Drive East<br />
+										Bethlehem, PA 18015</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Health Risk Behavior Lab. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
