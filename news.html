@@ -6,97 +6,122 @@
     <title>News & Awards - HRB Lab</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-/* --- Wrapper Layout --- */
-#wrapper {
-    display: flex;            /* sidebar + main content side by side */
-    min-height: 100vh;
-}
+    /* ==========================
+       Wrapper Layout
+    ========================== */
+    #wrapper {
+        display: flex;            /* sidebar + main content side by side */
+        min-height: 100vh;
+    }
 
-/* --- Sidebar Styling --- */
-#sidebar {
-    width: 250px;                         /* fixed width */
-    flex-shrink: 0;                        /* do not shrink */
-    background-color: rgba(45, 45, 45, 0.95); /* dark grey, slightly translucent */
-    color: #fff;                           /* white text */
-    padding: 2em 1.5em;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
-    position: relative;
-}
+    /* ==========================
+       Sidebar Layout & Styling
+    ========================== */
+    #sidebar {
+        width: 250px;                         /* fixed width */
+        flex-shrink: 0;                        /* do not shrink */
+        background-color: #2d2d2d;             /* solid dark grey */
+        color: #fff;                           /* white text */
+        display: flex;
+        flex-direction: column;
+        padding: 2em 1.5em;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+        position: relative;
+    }
 
-/* Sidebar links */
-#sidebar nav ul li a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5em 0;
-    transition: color 0.3s ease;
-}
+    #sidebar .inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 
-#sidebar nav ul li a:hover {
-    color: #f0f0f0;
-}
+    /* Sidebar navigation links */
+    #sidebar nav ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
 
-/* Submenu opener style */
-#sidebar nav ul li span.opener {
-    cursor: pointer;
-    display: block;
-    padding: 0.5em 0;
-    color: #fff;
-    font-weight: 600;
-}
+    #sidebar nav ul li a,
+    #sidebar nav ul li span.opener {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5em 0;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
 
-/* Sidebar section headers */
-#sidebar section header.major h2 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    color: #fff;
-}
+    #sidebar nav ul li a:hover,
+    #sidebar nav ul li span.opener:hover {
+        color: #f0f0f0;
+    }
 
-/* Contact info links */
-#sidebar ul.contact li a {
-    color: #fff;
-    text-decoration: underline;
-}
+    /* Make submenu opener bold */
+    #sidebar nav ul li span.opener {
+        font-weight: 600;
+    }
 
-/* Footer at bottom of sidebar */
-#sidebar #footer {
-    margin-top: auto;
-    font-size: 0.8em;
-    color: #ccc;
-}
+    /* Sidebar section headers */
+    #sidebar section header.major h2 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+        color: #fff;
+    }
 
-/* --- Main Content Styling --- */
-#main {
-    flex: 1;                  /* take remaining space */
-    padding: 2em;
-    background-color: #fff;   /* keep main content white */
-    position: relative;
-}
+    /* Contact info links */
+    #sidebar ul.contact li a {
+        color: #fff;
+        text-decoration: underline;
+    }
 
-/* Header icons */
-#header ul.icons {
-    margin-top: 1em;
-    display: flex;
-    gap: 0.5em;
-}
+    /* Footer at bottom of sidebar */
+    #sidebar #footer {
+        margin-top: auto;
+        font-size: 0.8em;
+        color: #ccc;
+    }
 
-/* News & Awards section spacing */
-#main section {
-    max-width: 900px;
-    margin: 0 auto;
-}
+    /* Hamburger menu fix */
+    #menu .opener {
+        order: -1; /* force to top of sidebar */
+    }
 
-#main section div {
-    margin-bottom: 2em;
-}
+    /* ==========================
+       Main Content Styling
+    ========================== */
+    #main {
+        flex: 1;                  /* take remaining space */
+        padding: 2em;
+        background-color: #fff;   /* keep main content white */
+        position: relative;
+    }
 
-/* Images inside news posts */
-#main img {
-    max-width: 100%;
-    margin: 1em 0;
-    display: block;
-}
-</style>
+    /* Header icons */
+    #header ul.icons {
+        margin-top: 1em;
+        display: flex;
+        gap: 0.5em;
+    }
+
+    /* News & Awards section spacing */
+    #main section {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #main section div {
+        margin-bottom: 2em;
+    }
+
+    /* Images inside news posts */
+    #main img {
+        max-width: 100%;
+        margin: 1em 0;
+        display: block;
+    }
+    </style>
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body class="is-preload">
