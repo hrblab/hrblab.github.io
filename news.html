@@ -7,47 +7,51 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="shortcut icon" href="favicon.ico" />
     <style>
-        /* Sidebar layout */
-        #wrapper {
-            display: flex;
-            flex-direction: row;
-        }
+    /* Sidebar layout */
+    #wrapper {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh; /* full viewport height */
+    }
 
-        #sidebar {
-            width: 250px;
-            min-width: 200px;
-            background: #f0f0f0;
-            padding: 20px;
-        }
+    #sidebar {
+        width: 250px;
+        min-width: 200px;
+        background: #f0f0f0;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100vh; /* full height */
+        overflow-y: auto; /* scroll if sidebar content is long */
+    }
 
-        #main {
-            flex-grow: 1;
-            padding: 20px;
-        }
+    #main {
+        flex-grow: 1;
+        padding: 20px;
+    }
 
-        /* Constrain images in news section */
-        .news-image img {
-            max-width: 400px; /* smaller photo */
-            height: auto;
-            display: block;
-            margin: 1em 0;
-        }
+    /* Constrain images in news section */
+    .news-image img {
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 1em 0;
+    }
 
-        /* Optional: make the menu links easier to see */
-        #menu ul li a {
-            display: block;
-            padding: 5px 0;
-            color: #333;
-            text-decoration: none;
-        }
+    /* Menu styling */
+    #menu ul li a {
+        display: block;
+        padding: 5px 0;
+        color: #333;
+        text-decoration: none;
+    }
 
-        #menu ul li span.opener {
-            font-weight: bold;
-            cursor: pointer;
-            display: block;
-            padding: 5px 0;
-        }
-
+    #menu ul li span.opener {
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+        padding: 5px 0;
+    }
+</style>
     </style>
 </head>
 <body class="is-preload">
