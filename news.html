@@ -6,58 +6,89 @@
     <title>News & Awards - HRB Lab</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <style>
-        /* Layout */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        #sidebar {
-            width: 250px;
-            background: #f0f0f0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        #main {
-            flex-grow: 1;
-            padding: 20px;
-        }
-
-        /* Menu styling */
-        #menu ul { list-style: none; padding: 0; }
-        #menu ul li { margin-bottom: 10px; }
-        #menu ul li a, #menu ul li span.opener {
-            display: block;
-            text-decoration: none;
-            color: #333;
-            font-weight: normal;
-            cursor: pointer;
-        }
-        #menu ul li span.opener { font-weight: bold; }
-
-        /* News images */
-        .news-image img {
-            max-width: 400px;
-            height: auto;
-            display: block;
-            margin: 1em 0;
-        }
-
-        /* Contact icons (optional) */
-        .contact li { margin-bottom: 10px; }
-    </style>
 </head>
 <body class="is-preload">
 
+<!-- Wrapper -->
 <div id="wrapper">
+
+    <!-- Main Content -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="content">
+                    <span class="image"><img src="images/lehigh_logo_small.png" alt="Lehigh Logo" /></span>
+                </div>
+                <ul class="icons">
+                    <li><a href="https://www.researchgate.net/profile/Lucy-Napper" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=Rl9LEIEAAAAJ&hl=en" class="icon solid fa-user-graduate"><span class="label">Google Scholar</span></a></li>
+                    <li><a href="https://github.com/hrblab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </header>
+
+            <!-- News & Awards Section -->
+            <section>
+                <header class="major">
+                    <h2>News & Awards</h2>
+                </header>
+
+                <!-- News Items -->
+                <div class="posts">
+
+                    <article>
+                        <h3>Spring 2026</h3>
+                        <ul>
+                            <li>Welcome new and returning lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata,</b> and <b>Giselle Vlassis</b>!</li>
+                            <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science to promote replication of health behavior research!</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Fall 2025</h3>
+                        <ul>
+                            <li>Welcome new and returning lab members: <b>Charlotte Busch-Vogel, Madison Lebowitz, Quang Luong, Zoe Moskalenko,</b> and <b>Melanie Siegel</b>!</li>
+                            <li>Congratulations to <b>Dr. Princess Neely</b> on her graduation and the successful defense of her dissertation!</li>
+                            <li>Congratulations to <b>Gavin Fox</b>, <b>Luis Gomez Gorgonio</b>, and <b>Maeve McGowan</b> on presenting their work at EPA!</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Spring 2024</h3>
+                        <ul>
+                            <li>Welcome new and returning lab members: <b>Skye Bates, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Sarah Stevenson,</b> and <b>Serena Wang</b>!</li>
+                            <li>Congratulations to <b>Skye Bates, Gianna LaMena,</b> and <b>Serena Wang</b> on their graduation!</li>
+                            <li><b>Gianna LaMena</b> presented her honors thesis.</li>
+                            <li>Congratulations to <b>Dr. Laura Wolter</b> on her graduation and the successful defense of her dissertation!</li>
+                        </ul>
+                        <div class="image"><img src="images/Laura dissertation.jpg" alt="Dr. Laura Wolter celebrating her dissertation defense" /></div>
+                    </article>
+
+                    <article>
+                        <h3>Fall 2023</h3>
+                        <ul>
+                            <li>Congratulations to <b>Gavin Fox</b> on having a poster presentation accepted for the 2024 SPSP Annual Convention!</li>
+                            <li>Congratulations to <b>Gianna LaMena</b> for being awarded the Strohl Research Grant!</li>
+                            <li>Welcome new and returning lab members: <b>Skye Bates, Nessia Crispe, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Serena Wang,</b> and <b>Cammie Wylie</b>!</li>
+                            <li>Congratulations to <b>Gavin Fox</b> on approval of their Master thesis proposal.</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Summer 2023</h3>
+                        <ul>
+                            <li>Well done to <b>Gabby Maramag, Laura Wolter,</b> and <b>Gavin Fox</b> on presenting their work on parent harm-reduction communication at the 46th annual RSA meeting.</li>
+                            <li>Welcome new lab members: <b>Ryan Gross</b> and <b>Serena Wang</b>!</li>
+                        </ul>
+                    </article>
+
+                    <!-- Add other news items in the same format -->
+                </div>
+            </section>
+
+        </div>
+    </div>
 
     <!-- Sidebar -->
     <div id="sidebar">
@@ -88,17 +119,16 @@
                 </ul>
             </nav>
 
-            <!-- Contact -->
+            <!-- Contact Section -->
             <section>
                 <header class="major">
                     <h2>Contact</h2>
                 </header>
-                <p>Dr. Napper's office is located at Chandler-Ullmann.</p>
+                <p>Dr. Napper's office is located in Chandler-Ullmann.</p>
                 <ul class="contact">
                     <li class="icon solid fa-envelope"><a href="mailto:Lucy.Napper@lehigh.edu">Lucy.Napper@lehigh.edu</a></li>
                     <li class="icon solid fa-phone">(610) 758-4689</li>
-                    <li class="icon solid fa-home">
-                        Chandler-Ullmann Hall, Room 107<br />
+                    <li class="icon solid fa-home">Chandler-Ullmann Hall, Room 107<br />
                         Lehigh University<br />
                         17 Memorial Drive East<br />
                         Bethlehem, PA 18015
@@ -114,126 +144,9 @@
         </div>
     </div>
 
-
-    <!-- Main Content -->
-    <div id="main">
-        <div class="inner">
-
-            <!-- Header -->
-            <header id="header">
-                <div class="content"><span class="image"><img src="images/lehigh_logo_small.png" alt="Lehigh Logo" /></span></div>
-                <ul class="icons">
-                    <li><a href="https://www.researchgate.net/profile/Lucy-Napper" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
-                    <li><a href="https://scholar.google.com/citations?user=Rl9LEIEAAAAJ&hl=en" class="icon solid fa-user-graduate"><span class="label">Google Scholar</span></a></li>
-                    <li><a href="https://github.com/hrblab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </header>
-
-            <!-- News & Awards Section -->
-            <section>
-                <header class="major">
-                    <h2>News & Awards</h2>
-                </header>
-
-                <div>
-                    <!-- Spring 2026 -->
-                    <div>
-                        <h3>Spring 2026</h3>
-                        <ul>
-                            <li>Welcome new and returning lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata,</b> and <b>Giselle Vlassis</b>!</li>
-                            <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science to promote replication of health behavior research!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Fall 2025 -->
-                    <div>
-                        <h3>Fall 2025</h3>
-                        <ul>
-                            <li>Welcome new and returning lab members: <b>Charlotte Busch-Vogel, Madison Lebowitz, Quang Luong, Zoe Moskalenko,</b> and <b>Melanie Siegel</b>!</li>
-                            <li>Congratulations to <b>Dr. Princess Neely</b> on her graduation and the successful defense of her dissertation! We are so proud of you! Best of luck in all that you do.</li>
-                            <li>Congratulations to <b>Gavin Fox</b>, <b>Luis Gomez Gorgonio</b>, and <b>Maeve McGowan</b> on presenting their work at EPA!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Spring 2024 -->
-                    <div>
-                        <h3>Spring 2024</h3>
-                        <ul>
-                            <li>Welcome new and returning lab members: <b>Skye Bates, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Sarah Stevenson,</b> and <b>Serena Wang</b>!</li>
-                            <li>Congratulations to <b>Skye Bates, Gianna LaMena,</b> and <b>Serena Wang</b> on their graduation!</li>
-                            <li><b>Gianna LaMena</b> presented her honors thesis.</li>
-                            <li>Congratulations to <b>Dr. Laura Wolter</b> on her graduation and the successful defense of her dissertation! We are so proud of you! Best of luck in all that you do.</li>
-                        </ul>
-                        <div class="news-image">
-                            <img src="images/Laura dissertation.jpg" alt="Dr. Laura Wolter celebrating her dissertation defense">
-                        </div>
-                    </div>
-
-                      <!-- Fall 2023 -->
-                    <div>
-                        <h3>Fall 2023</h3>
-                        <ul>
-                            <li>Congratulations to <b>Gavin Fox</b> on having a poster presentation accepted for the 2024 SPSP Annual Convention!</li>
-                            <li>Congratulations to <b>Gianna LaMena</b> for being awarded the Strohl Research Grant to support her honors thesis research! Her project focuses on barriers that parents face in communicating with their emerging adult children about sexual consent.</li>
-                            <li>Welcome new and returning lab members: <b>Skye Bates, Nessia Crispe, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Serena Wang,</b> and <b>Cammie Wylie</b>!</li>
-                            <li>Congratulations to <b>Gavin Fox</b> on approval of their Master thesis proposal.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Summer 2023 -->
-                    <div>
-                        <h3>Summer 2023</h3>
-                        <ul>
-                            <li>Well done to <b>Gabby Maramag, Laura Wolter,</b> and <b>Gavin Fox</b> on presenting their work on parent harm-reduction communication at the 46th annual scientific meeting of the Research Society on Alcoholism (RSA).</li>
-                            <li>Welcome new lab members: <b>Ryan Gross</b> and <b>Serena Wang</b>!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Spring 2023 -->
-                    <div>
-                        <h3>Spring 2023</h3>
-                        <ul>
-                            <li>Congratulations to <b>Elisa Lipkin</b> for graduating from Lehigh University with her Bachelor's degree in Pre-Dental Science!</li>
-                            <li>Congratulations to <b>Gabby Maramag</b> for graduating from Kutztown University of Pennsylvania with her Bachelor's degree in Psychology!</li>
-                            <li>Congratulations to <b>Nicole Jacobs</b> for graduating from Lehigh University with her Bachelor's degree in Psychology!</li>
-                            <li><b>Nessia Crispe</b> presented her honors project.</li>
-                            <li><b>Elisa Lipkin</b> was accepted into Penn Dental Medicine's DMD Program at the University of Pennsylvania!</li>
-                            <li>Congratulations to <b>Laura Wolter</b> on the publication of her paper on bystander norms in <i>Psychology of Violence</i>!</li>
-                            <li><b>Maeve McGowan</b> was awarded the Gold-Hansen Trophy by the music department.</li>
-                            <li><b>Gianna LaMena</b> was awarded a paid research assistantship at Mountaintop Campus in Dr. Sarah Borowski's lab.</li>
-                            <li>Congratulations to <b>Nessia Crispe</b> for being awarded the Strohl Research Grant!</li>
-                            <li><b>Gabby Maramag</b> accepted a job as post-bacc lab manager at the University of Michigan.</li>
-                            <li><b>Nicole Jacobs</b> presented her honors project.</li>
-                            <li><b>Clarissa Chun</b> presented her research on space and belonging at the Lehigh Student Affairs Assessment Symposium.</li>
-                            <li><b>Laura Wolter, Gabby Maramag,</b> and <b>Nicole Jacobs</b> presented at SPSP Annual Convention in Atlanta, GA.</li>
-                            <li>Welcome new lab members: <b>Maeve McGowan</b> and <b>Sarah Jacobs</b>!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Fall 2022 -->
-                    <div>
-                        <h3>Fall 2022</h3>
-                        <ul>
-                            <li>Welcome <b>Gavin Fox</b> to the lab as a first-year PhD student!</li>
-                            <li>Welcome new and returning lab members: <b>Skye Bates, Thomas Stoughton, Cammie Wylie, Elisa Lipkin,</b> and <b>Gianna LaMena</b>!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Summer 2022 -->
-                    <div>
-                        <h3>Summer 2022</h3>
-                        <ul>
-                            <li>Welcome new lab member: <b>Gabby Maramag</b>!</li>
-                            <li><b>Laura Wolter</b> presented her work at the Research Society on Alcoholism (RSA) Annual Convention in Orlando, FL.</li>
-                        </ul>
-                </div>
-            </section>
-
-        </div>
-    </div>
-
 </div>
 
+<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
