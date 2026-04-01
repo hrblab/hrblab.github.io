@@ -6,121 +6,118 @@
     <title>News & Awards - HRB Lab</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-    /* ==========================
-       Wrapper Layout
-    ========================== */
-    #wrapper {
-        display: flex;            /* sidebar + main content side by side */
-        min-height: 100vh;
-    }
+        /* ==========================
+           Wrapper Layout
+        ========================== */
+        #wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
 
-    /* ==========================
-       Sidebar Layout & Styling
-    ========================== */
-    #sidebar {
-        width: 250px;                         /* fixed width */
-        flex-shrink: 0;                        /* do not shrink */
-        background-color: #2d2d2d;             /* solid dark grey */
-        color: #fff;                           /* white text */
-        display: flex;
-        flex-direction: column;
-        padding: 2em 1.5em;
-        box-shadow: 2px 0 8px rgba(0,0,0,0.15);
-        position: relative;
-    }
+        /* ==========================
+           Sidebar Styling
+        ========================== */
+        #sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            background-color: #2d2d2d;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2em 1.5em;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+            position: relative;
+        }
 
-    #sidebar .inner {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+        #sidebar .inner {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-    /* Sidebar navigation links */
-    #sidebar nav ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-    }
+        #sidebar nav ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
-    #sidebar nav ul li a,
-    #sidebar nav ul li span.opener {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 0.5em 0;
-        font-weight: 500;
-        transition: color 0.3s ease;
-        cursor: pointer;
-    }
+        #sidebar nav ul li a,
+        #sidebar nav ul li span.opener {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 0;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
 
-    #sidebar nav ul li a:hover,
-    #sidebar nav ul li span.opener:hover {
-        color: #f0f0f0;
-    }
+        #sidebar nav ul li a:hover,
+        #sidebar nav ul li span.opener:hover {
+            color: #f0f0f0;
+        }
 
-    /* Make submenu opener bold */
-    #sidebar nav ul li span.opener {
-        font-weight: 600;
-    }
+        #sidebar nav ul li span.opener {
+            font-weight: 600;
+        }
 
-    /* Sidebar section headers */
-    #sidebar section header.major h2 {
-        font-size: 1.2em;
-        margin-bottom: 0.5em;
-        color: #fff;
-    }
+        #sidebar section header.major h2 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            color: #fff;
+        }
 
-    /* Contact info links */
-    #sidebar ul.contact li a {
-        color: #fff;
-        text-decoration: underline;
-    }
+        #sidebar ul.contact li a {
+            color: #fff;
+            text-decoration: underline;
+        }
 
-    /* Footer at bottom of sidebar */
-    #sidebar #footer {
-        margin-top: auto;
-        font-size: 0.8em;
-        color: #ccc;
-    }
+        #sidebar #footer {
+            margin-top: auto;
+            font-size: 0.8em;
+            color: #ccc;
+        }
 
-    /* Hamburger menu fix */
-    #menu .opener {
-        order: -1; /* force to top of sidebar */
-    }
+        /* Hamburger button styling */
+        #sidebar a.toggle {
+            display: block;
+            font-size: 1.5em;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 1em;
+        }
 
-    /* ==========================
-       Main Content Styling
-    ========================== */
-    #main {
-        flex: 1;                  /* take remaining space */
-        padding: 2em;
-        background-color: #fff;   /* keep main content white */
-        position: relative;
-    }
+        /* ==========================
+           Main Content Styling
+        ========================== */
+        #main {
+            flex: 1;
+            padding: 2em;
+            background-color: #fff;
+            position: relative;
+        }
 
-    /* Header icons */
-    #header ul.icons {
-        margin-top: 1em;
-        display: flex;
-        gap: 0.5em;
-    }
+        #header ul.icons {
+            margin-top: 1em;
+            display: flex;
+            gap: 0.5em;
+        }
 
-    /* News & Awards section spacing */
-    #main section {
-        max-width: 900px;
-        margin: 0 auto;
-    }
+        #main section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-    #main section div {
-        margin-bottom: 2em;
-    }
+        #main section div {
+            margin-bottom: 2em;
+        }
 
-    /* Images inside news posts */
-    #main img {
-        max-width: 100%;
-        margin: 1em 0;
-        display: block;
-    }
+        #main img {
+            max-width: 100%;
+            margin: 1em 0;
+            display: block;
+        }
     </style>
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
@@ -128,6 +125,63 @@
 
 <!-- Wrapper -->
 <div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Hamburger toggle button -->
+            <a href="#sidebar" class="toggle">☰</a>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Who We Are</span>
+                        <ul>
+                            <li><a href="lab-director.html">Lab Director</a></li>
+                            <li><a href="the-team.html">The Team</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Research</span>
+                        <ul>
+                            <li><a href="publications.html">Publications</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="news.html">News & Awards</a></li>
+                    <li><a href="join.html">Join Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact Section -->
+            <section>
+                <header class="major">
+                    <h2>Contact</h2>
+                </header>
+                <p>Dr. Napper's office is located in Chandler-Ullmann.</p>
+                <ul class="contact">
+                    <li class="icon solid fa-envelope"><a href="mailto:Lucy.Napper@lehigh.edu">Lucy.Napper@lehigh.edu</a></li>
+                    <li class="icon solid fa-phone">(610) 758-4689</li>
+                    <li class="icon solid fa-home">Chandler-Ullmann Hall, Room 107<br />
+                        Lehigh University<br />
+                        17 Memorial Drive East<br />
+                        Bethlehem, PA 18015
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p>&copy; Health Risk Behavior Lab. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
+
+        </div>
+    </div>
 
     <!-- Main Content -->
     <div id="main">
@@ -145,22 +199,18 @@
                 </ul>
             </header>
 
-          <!-- News & Awards Section -->
-<section>
-    <header class="major">
-        <h2>News & Awards</h2>
-    </header>
+            <!-- News & Awards Section -->
+            <section>
+                <header class="major">
+                    <h2>News & Awards</h2>
+                </header>
 
-    <!-- Spring 2026 -->
-    <div>
-        <h3>Spring 2026</h3>
-        <ul>
-            <li>Welcome new and returning lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata,</b> and <b>Giselle Vlassis</b>!</li>
-            <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science!</li>
-        </ul>
-    </div>
-
-    <!-- Fall 2025 -->
+                <!-- Your seasonal news content here -->
+                <div>
+                    <h3>Spring 2026</h3>
+                    <ul>
+                        <li>Welcome new lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata, Giselle Vlassis</b>!</li>
+                        <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science!</li>
     <div>
         <h3>Fall 2025</h3>
         <ul>
@@ -302,6 +352,7 @@
 
 </div>
 
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
@@ -311,3 +362,4 @@
 
 </body>
 </html>
+
