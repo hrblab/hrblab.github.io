@@ -1,355 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>News & Awards - HRB Lab</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        /* ==========================
-           Wrapper Layout
-        ========================== */
-        #wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News & Awards - HRB Lab</title>
 
-        /* ==========================
-           Sidebar Layout & Styling
-        ========================== */
-        #sidebar {
-            width: 250px;
-            flex-shrink: 0;
-            background-color: #2d2d2d;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            padding: 2em 1.5em;
-            box-shadow: 2px 0 8px rgba(0,0,0,0.15);
-            position: relative;
-        }
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        #sidebar .inner {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+    }
 
-        /* Sidebar navigation links */
-        #sidebar nav ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
+    /* Layout */
+    #wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
 
-        #sidebar nav ul li a,
-        #sidebar nav ul li span.opener {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 0;
-            font-weight: 500;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+    /* Sidebar */
+    #sidebar {
+      width: 260px;
+      background: #f7f7f7;
+      border-right: 1px solid #e0e0e0;
+      padding: 2em 1.5em;
+    }
 
-        #sidebar nav ul li a:hover,
-        #sidebar nav ul li span.opener:hover {
-            color: #f0f0f0;
-        }
+    #sidebar h2 {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+      position: relative;
+    }
 
-        #sidebar nav ul li span.opener {
-            font-weight: 600;
-        }
+    #sidebar h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #c8102e;
+      margin-top: 6px;
+    }
 
-        /* Initially hide submenus */
-        #sidebar nav ul li ul {
-            display: none;
-            padding-left: 1em;
-        }
+    #sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        /* Sidebar section headers */
-        #sidebar section header.major h2 {
-            font-size: 1.2em;
-            margin-bottom: 0.5em;
-            color: #fff;
-        }
+    #sidebar ul li {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 0.6em 0;
+    }
 
-        #sidebar ul.contact li a {
-            color: #fff;
-            text-decoration: underline;
-        }
+    #sidebar a,
+    #sidebar .opener {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+    }
 
-        #sidebar #footer {
-            margin-top: auto;
-            font-size: 0.8em;
-            color: #ccc;
-        }
+    #sidebar a:hover {
+      color: #c8102e;
+    }
 
-        /* ==========================
-           Main Content Styling
-        ========================== */
-        #main {
-            flex: 1;
-            padding: 2em;
-            background-color: #fff;
-            position: relative;
-        }
+    /* Submenu */
+    #sidebar ul ul {
+      display: none;
+      padding-left: 1em;
+    }
 
-        #header ul.icons {
-            margin-top: 1em;
-            display: flex;
-            gap: 0.5em;
-        }
+    #sidebar ul ul li {
+      border: none;
+      padding: 0.4em 0;
+      font-size: 0.9em;
+    }
 
-        #main section {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    /* Contact */
+    #sidebar .contact li {
+      font-size: 0.9em;
+      margin-bottom: 0.7em;
+      color: #555;
+    }
 
-        #main section div {
-            margin-bottom: 2em;
-        }
+    /* Main content */
+    #main {
+      flex: 1;
+    }
 
-        #main img {
-            max-width: 100%;
-            margin: 1em 0;
-            display: block;
-        }
-    </style>
-    <link rel="shortcut icon" href="favicon.ico" />
+    #main .inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em 3em;
+    }
+
+    /* Header */
+    #header {
+      border-bottom: 3px solid #c8102e;
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+    }
+
+    /* Section title */
+    header.major h2 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    header.major h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #c8102e;
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 2em;
+    }
+  </style>
 </head>
-<body class="is-preload">
 
-<!-- Wrapper -->
+<body>
+
 <div id="wrapper">
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <div class="inner">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="inner">
 
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>
-                        <span class="opener">Who We Are</span>
-                        <ul>
-                            <li><a href="lab-director.html">Lab Director</a></li>
-                            <li><a href="the-team.html">The Team</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Research</span>
-                        <ul>
-                            <li><a href="publications.html">Publications</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="news.html">News & Awards</a></li>
-                    <li><a href="join.html">Join Us</a></li>
-                </ul>
-            </nav>
+      <nav>
+        <header class="major">
+          <h2>Menu</h2>
+        </header>
 
-            <!-- Contact Section -->
-            <section>
-                <header class="major">
-                    <h2>Contact</h2>
-                </header>
-                <p>Dr. Napper's office is located in Chandler-Ullmann.</p>
-                <ul class="contact">
-                    <li class="icon solid fa-envelope"><a href="mailto:Lucy.Napper@lehigh.edu">Lucy.Napper@lehigh.edu</a></li>
-                    <li class="icon solid fa-phone">(610) 758-4689</li>
-                    <li class="icon solid fa-home">
-                        Chandler-Ullmann Hall, Room 107<br />
-                        Lehigh University<br />
-                        17 Memorial Drive East<br />
-                        Bethlehem, PA 18015
-                    </li>
-                </ul>
-            </section>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
 
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; Health Risk Behavior Lab. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-            </footer>
+          <li>
+            <span class="opener">WHO WE ARE</span>
+            <ul>
+              <li><a href="lab-director.html">Lab Director</a></li>
+              <li><a href="the-team.html">The Team</a></li>
+            </ul>
+          </li>
 
-        </div>
+          <li>
+            <span class="opener">RESEARCH</span>
+            <ul>
+              <li><a href="publications.html">Publications</a></li>
+            </ul>
+          </li>
+
+          <li><a href="news.html">NEWS & AWARDS</a></li>
+          <li><a href="join.html">JOIN US</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <header class="major">
+          <h2>Contact</h2>
+        </header>
+        <p>Dr. Napper's office is located in Chandler-Ullmann.</p>
+        <ul class="contact">
+          <li><i class="fa fa-envelope"></i> Lucy.Napper@lehigh.edu</li>
+          <li><i class="fa fa-phone"></i> (610) 758-4689</li>
+          <li><i class="fa fa-home"></i> Chandler-Ullmann Hall, Room 107<br>
+            Lehigh University<br>
+            17 Memorial Drive East<br>
+            Bethlehem, PA 18015
+          </li>
+        </ul>
+      </section>
+
     </div>
-
-    <!-- Main Content -->
-    <div id="main">
-        <div class="inner">
-
-            <!-- Header -->
-            <header id="header">
-                <div class="content">
-                    <span class="image"><img src="images/lehigh_logo_small.png" alt="Lehigh Logo" /></span>
-                </div>
-                <ul class="icons">
-                    <li><a href="https://www.researchgate.net/profile/Lucy-Napper" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
-                    <li><a href="https://scholar.google.com/citations?user=Rl9LEIEAAAAJ&hl=en" class="icon solid fa-user-graduate"><span class="label">Google Scholar</span></a></li>
-                    <li><a href="https://github.com/hrblab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </header>
-
-            <!-- News & Awards Section -->
-            <section>
-                <header class="major">
-                    <h2>News & Awards</h2>
-                </header>
-
-                <!-- Spring 2026 -->
-                <div>
-                    <h3>Spring 2026</h3>
-                    <ul>
-                        <li>Welcome new and returning lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata,</b> and <b>Giselle Vlassis</b>!</li>
-                        <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science!</li>
-                    </ul>
-                </div>
-
-                <!-- Fall 2025 -->
-                <div>
-                    <h3>Fall 2025</h3>
-                    <ul>
-                        <li>Welcome new and returning lab members: <b>Charlotte Busch-Vogel, Madison Lebowitz, Quang Luong, Zoe Moskalenko,</b> and <b>Melanie Siegel</b>!</li>
-                        <li>Congratulations to <b>Dr. Princess Neely</b> on her graduation and dissertation defense!</li>
-                        <li>Congratulations to <b>Gavin Fox</b>, <b>Luis Gomez Gorgonio</b>, and <b>Maeve McGowan</b> on presenting their work at EPA!</li>
-                    </ul>
-                </div>
-
-                <!-- Spring 2024 -->
-                <div>
-                    <h3>Spring 2024</h3>
-                    <ul>
-                        <li>Welcome new and returning lab members: <b>Skye Bates, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Sarah Stevenson,</b> and <b>Serena Wang</b>!</li>
-                        <li>Congratulations to <b>Skye Bates, Gianna LaMena,</b> and <b>Serena Wang</b> on their graduation!</li>
-                        <li><b>Gianna LaMena</b> presented her honors thesis.</li>
-                        <li>Congratulations to <b>Dr. Laura Wolter</b> on her dissertation defense!</li>
-                    </ul>
-                    <img src="images/Laura dissertation.jpg" alt="Dr. Laura Wolter celebrating her dissertation defense" style="max-width: 400px; margin: 1em 0; display:block;">
-                </div>
-
-                <!-- Fall 2023 -->
-                <div>
-                    <h3>Fall 2023</h3>
-                    <ul>
-                        <li>Congratulations to <b>Gavin Fox</b> on having a poster accepted for the 2024 SPSP Annual Convention!</li>
-                        <li>Congratulations to <b>Gianna LaMena</b> for receiving the Strohl Research Grant!</li>
-                        <li>Welcome new and returning lab members: <b>Skye Bates, Nessia Crispe, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Serena Wang,</b> and <b>Cammie Wylie</b>!</li>
-                        <li>Congratulations to <b>Gavin Fox</b> on approval of their Master thesis proposal.</li>
-                    </ul>
-                </div>
-
-                <!-- Summer 2023 -->
-                <div>
-                    <h3>Summer 2023</h3>
-                    <ul>
-                        <li>Well done to <b>Gabby Maramag, Laura Wolter,</b> and <b>Gavin Fox</b> on presenting their work at RSA 46th Annual Meeting.</li>
-                        <li>Welcome new lab members: <b>Ryan Gross</b> and <b>Serena Wang</b>!</li>
-                    </ul>
-                </div>
-
-                <!-- Spring 2023 -->
-                <div>
-                    <h3>Spring 2023</h3>
-                    <ul>
-                        <li>Congratulations to <b>Elisa Lipkin</b> for graduating from Lehigh University with her Bachelor's in Pre-Dental Science!</li>
-                        <li>Congratulations to <b>Gabby Maramag</b> for graduating from Kutztown University!</li>
-                        <li>Congratulations to <b>Nicole Jacobs</b> for graduating from Lehigh University with her Bachelor's degree in Psychology!</li>
-                        <li><b>Nessia Crispe</b> presented her honors project.</li>
-                        <li><b>Elisa Lipkin</b> was accepted into Penn Dental Medicine's DMD Program at the University of Pennsylvania!</li>
-                        <li>Congratulations to <b>Laura Wolter</b> on the publication of her paper on bystander norms in <i>Psychology of Violence</i>!</li>
-                        <li><b>Maeve McGowan</b> was awarded the Gold-Hansen Trophy by the music department.</li>
-                        <li><b>Gianna LaMena</b> was awarded a paid research assistantship at Mountaintop Campus in Dr. Sarah Borowski's lab.</li>
-                        <li>Congratulations to <b>Nessia Crispe</b> for being awarded the Strohl Research Grant!</li>
-                        <li><b>Gabby Maramag</b> accepted a job as post-bacc lab manager at the University of Michigan.</li>
-                        <li><b>Nicole Jacobs</b> presented her honors project.</li>
-                        <li><b>Clarissa Chun</b> presented her research on space and belonging at the Lehigh Student Affairs Assessment Symposium.</li>
-                        <li><b>Laura Wolter, Gabby Maramag,</b> and <b>Nicole Jacobs</b> presented at SPSP Annual Convention in Atlanta, GA.</li>
-                        <li>Welcome new lab members: <b>Maeve McGowan</b> and <b>Sarah Jacobs</b>!</li>
-                    </ul>
-                </div>
-
-                <!-- Fall 2022 -->
-                <div>
-                    <h3>Fall 2022</h3>
-                    <ul>
-                        <li>Welcome <b>Gavin Fox</b> to the lab as a first-year PhD student!</li>
-                        <li>Welcome new and returning lab members: <b>Skye Bates, Thomas Stoughton, Cammie Wylie, Elisa Lipkin,</b> and <b>Gianna LaMena</b>!</li>
-                    </ul>
-                </div>
-
-                <!-- Summer 2022 -->
-                <div>
-                    <h3>Summer 2022</h3>
-                    <ul>
-                        <li>Welcome new lab member: <b>Gabby Maramag</b>!</li>
-                        <li><b>Laura Wolter</b> presented her work at the Research Society on Alcoholism (RSA) Annual Convention in Orlando, FL.</li>
-                    </ul>
-                </div>
-
-            </section>
-
-        </div>
- 	</div>
-
-		<!-- Sidebar -->
-<div id="sidebar">
-  <div class="inner">
-
-    <!-- Menu -->
-    <nav id="menu">
-      <header class="major">
-        <h2>Menu</h2>
-      </header>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <span class="opener">Who We Are</span>
-          <ul>
-            <li><a href="lab-director.html">Lab Director</a></li>
-            <li><a href="the-team.html">The Team</a></li>
-          </ul>
-        </li>
-        <li>
-          <span class="opener">Research</span>
-          <ul>
-            <li><a href="publications.html">Publications</a></li>
-          </ul>
-        </li>
-        <li><a href="news.html">News & Awards</a></li>
-        <li><a href="join.html">Join Us</a></li>
-      </ul>
-    </nav>
-
-    <!-- Contact -->
-    <section>
-      <header class="major">
-        <h2>Contact</h2>
-      </header>
-      <p>Dr. Napper's office is located in Chandler-Ullmann.</p>
-      <ul class="contact">
-        <li class="icon solid fa-envelope"><a href="mailto:Lucy.Napper@lehigh.edu">Lucy.Napper@lehigh.edu</a></li>
-        <li class="icon solid fa-phone">(610) 758-4689</li>
-        <li class="icon solid fa-home">
-          Chandler-Ullmann Hall, Room 107<br>
-          Lehigh University<br>
-          17 Memorial Drive East<br>
-          Bethlehem, PA 18015
-        </li>
-      </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <p class="copyright">
-        &copy; Health Risk Behavior Lab. All rights reserved. Demo Images: 
-        <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
-      </p>
-    </footer>
-
   </div>
+
+  <!-- Main -->
+  <div id="main">
+    <div class="inner">
+
+      <header id="header">
+        <img src="images/lehigh_logo_small.png" alt="Lehigh Logo" style="height:40px;">
+      </header>
+
+      <section>
+        <header class="major">
+          <h2>News & Awards</h2>
+        </header>
+
+        <h3>Spring 2026</h3>
+        <ul>
+          <li>Welcome new and returning lab members.</li>
+          <li>Congratulations to Gavin Fox on receiving a grant.</li>
+        </ul>
+
+        <h3>Fall 2025</h3>
+        <ul>
+          <li>Welcome new lab members.</li>
+          <li>Congratulations on dissertation defense.</li>
+        </ul>
+
+        <h3>Spring 2024</h3>
+        <ul>
+          <li>Welcome new and returning lab members.</li>
+          <li>Congratulations to graduates.</li>
+        </ul>
+
+      </section>
+
+    </div>
+  </div>
+
 </div>
+
+<!-- Dropdown Script -->
+<script>
+document.querySelectorAll('.opener').forEach(item => {
+  item.addEventListener('click', () => {
+    const submenu = item.nextElementSibling;
+    submenu.style.display =
+      submenu.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+
+</body>
+</html>
