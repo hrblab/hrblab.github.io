@@ -6,121 +6,116 @@
     <title>News & Awards - HRB Lab</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-    /* ==========================
-       Wrapper Layout
-    ========================== */
-    #wrapper {
-        display: flex;            /* sidebar + main content side by side */
-        min-height: 100vh;
-    }
+        /* ==========================
+           Wrapper Layout
+        ========================== */
+        #wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
 
-    /* ==========================
-       Sidebar Layout & Styling
-    ========================== */
-    #sidebar {
-        width: 250px;                         /* fixed width */
-        flex-shrink: 0;                        /* do not shrink */
-        background-color: #2d2d2d;             /* solid dark grey */
-        color: #fff;                           /* white text */
-        display: flex;
-        flex-direction: column;
-        padding: 2em 1.5em;
-        box-shadow: 2px 0 8px rgba(0,0,0,0.15);
-        position: relative;
-    }
+        /* ==========================
+           Sidebar Layout & Styling
+        ========================== */
+        #sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            background-color: #2d2d2d;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2em 1.5em;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+            position: relative;
+        }
 
-    #sidebar .inner {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+        #sidebar .inner {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-    /* Sidebar navigation links */
-    #sidebar nav ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-    }
+        /* Sidebar navigation links */
+        #sidebar nav ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
-    #sidebar nav ul li a,
-    #sidebar nav ul li span.opener {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 0.5em 0;
-        font-weight: 500;
-        transition: color 0.3s ease;
-        cursor: pointer;
-    }
+        #sidebar nav ul li a,
+        #sidebar nav ul li span.opener {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 0;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
 
-    #sidebar nav ul li a:hover,
-    #sidebar nav ul li span.opener:hover {
-        color: #f0f0f0;
-    }
+        #sidebar nav ul li a:hover,
+        #sidebar nav ul li span.opener:hover {
+            color: #f0f0f0;
+        }
 
-    /* Make submenu opener bold */
-    #sidebar nav ul li span.opener {
-        font-weight: 600;
-    }
+        #sidebar nav ul li span.opener {
+            font-weight: 600;
+        }
 
-    /* Sidebar section headers */
-    #sidebar section header.major h2 {
-        font-size: 1.2em;
-        margin-bottom: 0.5em;
-        color: #fff;
-    }
+        /* Initially hide submenus */
+        #sidebar nav ul li ul {
+            display: none;
+            padding-left: 1em;
+        }
 
-    /* Contact info links */
-    #sidebar ul.contact li a {
-        color: #fff;
-        text-decoration: underline;
-    }
+        /* Sidebar section headers */
+        #sidebar section header.major h2 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            color: #fff;
+        }
 
-    /* Footer at bottom of sidebar */
-    #sidebar #footer {
-        margin-top: auto;
-        font-size: 0.8em;
-        color: #ccc;
-    }
+        #sidebar ul.contact li a {
+            color: #fff;
+            text-decoration: underline;
+        }
 
-    /* Hamburger menu fix */
-    #menu .opener {
-        order: -1; /* force to top of sidebar */
-    }
+        #sidebar #footer {
+            margin-top: auto;
+            font-size: 0.8em;
+            color: #ccc;
+        }
 
-    /* ==========================
-       Main Content Styling
-    ========================== */
-    #main {
-        flex: 1;                  /* take remaining space */
-        padding: 2em;
-        background-color: #fff;   /* keep main content white */
-        position: relative;
-    }
+        /* ==========================
+           Main Content Styling
+        ========================== */
+        #main {
+            flex: 1;
+            padding: 2em;
+            background-color: #fff;
+            position: relative;
+        }
 
-    /* Header icons */
-    #header ul.icons {
-        margin-top: 1em;
-        display: flex;
-        gap: 0.5em;
-    }
+        #header ul.icons {
+            margin-top: 1em;
+            display: flex;
+            gap: 0.5em;
+        }
 
-    /* News & Awards section spacing */
-    #main section {
-        max-width: 900px;
-        margin: 0 auto;
-    }
+        #main section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-    #main section div {
-        margin-bottom: 2em;
-    }
+        #main section div {
+            margin-bottom: 2em;
+        }
 
-    /* Images inside news posts */
-    #main img {
-        max-width: 100%;
-        margin: 1em 0;
-        display: block;
-    }
+        #main img {
+            max-width: 100%;
+            margin: 1em 0;
+            display: block;
+        }
     </style>
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
@@ -128,123 +123,6 @@
 
 <!-- Wrapper -->
 <div id="wrapper">
-
-    <!-- Main Content -->
-    <div id="main">
-        <div class="inner">
-
-            <!-- Header -->
-            <header id="header">
-                <div class="content">
-                    <span class="image"><img src="images/lehigh_logo_small.png" alt="Lehigh Logo" /></span>
-                </div>
-                <ul class="icons">
-                    <li><a href="https://www.researchgate.net/profile/Lucy-Napper" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
-                    <li><a href="https://scholar.google.com/citations?user=Rl9LEIEAAAAJ&hl=en" class="icon solid fa-user-graduate"><span class="label">Google Scholar</span></a></li>
-                    <li><a href="https://github.com/hrblab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </header>
-
-          <!-- News & Awards Section -->
-<section>
-    <header class="major">
-        <h2>News & Awards</h2>
-    </header>
-
-    <!-- Spring 2026 -->
-    <div>
-        <h3>Spring 2026</h3>
-        <ul>
-            <li>Welcome new and returning lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata,</b> and <b>Giselle Vlassis</b>!</li>
-            <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science!</li>
-        </ul>
-    </div>
-
-    <!-- Fall 2025 -->
-    <div>
-        <h3>Fall 2025</h3>
-        <ul>
-            <li>Welcome new and returning lab members: <b>Charlotte Busch-Vogel, Madison Lebowitz, Quang Luong, Zoe Moskalenko,</b> and <b>Melanie Siegel</b>!</li>
-            <li>Congratulations to <b>Dr. Princess Neely</b> on her graduation and dissertation defense!</li>
-            <li>Congratulations to <b>Gavin Fox</b>, <b>Luis Gomez Gorgonio</b>, and <b>Maeve McGowan</b> on presenting their work at EPA!</li>
-        </ul>
-    </div>
-
-    <!-- Spring 2024 -->
-    <div>
-        <h3>Spring 2024</h3>
-        <ul>
-            <li>Welcome new and returning lab members: <b>Skye Bates, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Sarah Stevenson,</b> and <b>Serena Wang</b>!</li>
-            <li>Congratulations to <b>Skye Bates, Gianna LaMena,</b> and <b>Serena Wang</b> on their graduation!</li>
-            <li><b>Gianna LaMena</b> presented her honors thesis.</li>
-            <li>Congratulations to <b>Dr. Laura Wolter</b> on her dissertation defense!</li>
-        </ul>
-        <img src="images/Laura dissertation.jpg" alt="Dr. Laura Wolter celebrating her dissertation defense" style="max-width: 400px; margin: 1em 0; display:block;">
-    </div>
-
-    <!-- Fall 2023 -->
-    <div>
-        <h3>Fall 2023</h3>
-        <ul>
-            <li>Congratulations to <b>Gavin Fox</b> on having a poster accepted for the 2024 SPSP Annual Convention!</li>
-            <li>Congratulations to <b>Gianna LaMena</b> for receiving the Strohl Research Grant!</li>
-            <li>Welcome new and returning lab members: <b>Skye Bates, Nessia Crispe, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Serena Wang,</b> and <b>Cammie Wylie</b>!</li>
-            <li>Congratulations to <b>Gavin Fox</b> on approval of their Master thesis proposal.</li>
-        </ul>
-    </div>
-
-    <!-- Summer 2023 -->
-    <div>
-        <h3>Summer 2023</h3>
-        <ul>
-            <li>Well done to <b>Gabby Maramag, Laura Wolter,</b> and <b>Gavin Fox</b> on presenting their work at RSA 46th Annual Meeting.</li>
-            <li>Welcome new lab members: <b>Ryan Gross</b> and <b>Serena Wang</b>!</li>
-        </ul>
-    </div>
-
-    <!-- Remaining seasons -->
-    <div>
-        <h3>Spring 2023</h3>
-        <ul>
-            <li>Congratulations to <b>Elisa Lipkin</b> for graduating from Lehigh University with her Bachelor's in Pre-Dental Science!</li>
-            <li>Congratulations to <b>Gabby Maramag</b> for graduating from Kutztown University!</li>
-            <li>Congratulations to <b>Nicole Jacobs</b> for graduating from Lehigh University with her Bachelor's degree in Psychology!</li>
-            <li><b>Nessia Crispe</b> presented her honors project.</li>
-            <li><b>Elisa Lipkin</b> was accepted into Penn Dental Medicine's DMD Program at the University of Pennsylvania!</li>
-            <li>Congratulations to <b>Laura Wolter</b> on the publication of her paper on bystander norms in <i>Psychology of Violence</i>!</li>
-            <li><b>Maeve McGowan</b> was awarded the Gold-Hansen Trophy by the music department.</li>
-            <li><b>Gianna LaMena</b> was awarded a paid research assistantship at Mountaintop Campus in Dr. Sarah Borowski's lab.</li>
-            <li>Congratulations to <b>Nessia Crispe</b> for being awarded the Strohl Research Grant!</li>
-            <li><b>Gabby Maramag</b> accepted a job as post-bacc lab manager at the University of Michigan.</li>
-            <li><b>Nicole Jacobs</b> presented her honors project.</li>
-            <li><b>Clarissa Chun</b> presented her research on space and belonging at the Lehigh Student Affairs Assessment Symposium.</li>
-            <li><b>Laura Wolter, Gabby Maramag,</b> and <b>Nicole Jacobs</b> presented at SPSP Annual Convention in Atlanta, GA.</li>
-            <li>Welcome new lab members: <b>Maeve McGowan</b> and <b>Sarah Jacobs</b>!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Fall 2022 -->
-                    <div>
-                        <h3>Fall 2022</h3>
-                        <ul>
-                            <li>Welcome <b>Gavin Fox</b> to the lab as a first-year PhD student!</li>
-                            <li>Welcome new and returning lab members: <b>Skye Bates, Thomas Stoughton, Cammie Wylie, Elisa Lipkin,</b> and <b>Gianna LaMena</b>!</li>
-                        </ul>
-                    </div>
-
-                    <!-- Summer 2022 -->
-                    <div>
-                        <h3>Summer 2022</h3>
-                        <ul>
-                            <li>Welcome new lab member: <b>Gabby Maramag</b>!</li>
-                            <li><b>Laura Wolter</b> presented her work at the Research Society on Alcoholism (RSA) Annual Convention in Orlando, FL.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </div>
 
     <!-- Sidebar -->
     <div id="sidebar">
@@ -284,7 +162,8 @@
                 <ul class="contact">
                     <li class="icon solid fa-envelope"><a href="mailto:Lucy.Napper@lehigh.edu">Lucy.Napper@lehigh.edu</a></li>
                     <li class="icon solid fa-phone">(610) 758-4689</li>
-                    <li class="icon solid fa-home">Chandler-Ullmann Hall, Room 107<br />
+                    <li class="icon solid fa-home">
+                        Chandler-Ullmann Hall, Room 107<br />
                         Lehigh University<br />
                         17 Memorial Drive East<br />
                         Bethlehem, PA 18015
@@ -300,6 +179,123 @@
         </div>
     </div>
 
+    <!-- Main Content -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="content">
+                    <span class="image"><img src="images/lehigh_logo_small.png" alt="Lehigh Logo" /></span>
+                </div>
+                <ul class="icons">
+                    <li><a href="https://www.researchgate.net/profile/Lucy-Napper" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=Rl9LEIEAAAAJ&hl=en" class="icon solid fa-user-graduate"><span class="label">Google Scholar</span></a></li>
+                    <li><a href="https://github.com/hrblab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </header>
+
+            <!-- News & Awards Section -->
+            <section>
+                <header class="major">
+                    <h2>News & Awards</h2>
+                </header>
+
+                <!-- Spring 2026 -->
+                <div>
+                    <h3>Spring 2026</h3>
+                    <ul>
+                        <li>Welcome new and returning lab members: <b>Gabriella D'Alessio, Jane Manning, Jordan Serata,</b> and <b>Giselle Vlassis</b>!</li>
+                        <li>Congratulations to <b>Gavin Fox</b> on receiving a grant from the Center for Open Science!</li>
+                    </ul>
+                </div>
+
+                <!-- Fall 2025 -->
+                <div>
+                    <h3>Fall 2025</h3>
+                    <ul>
+                        <li>Welcome new and returning lab members: <b>Charlotte Busch-Vogel, Madison Lebowitz, Quang Luong, Zoe Moskalenko,</b> and <b>Melanie Siegel</b>!</li>
+                        <li>Congratulations to <b>Dr. Princess Neely</b> on her graduation and dissertation defense!</li>
+                        <li>Congratulations to <b>Gavin Fox</b>, <b>Luis Gomez Gorgonio</b>, and <b>Maeve McGowan</b> on presenting their work at EPA!</li>
+                    </ul>
+                </div>
+
+                <!-- Spring 2024 -->
+                <div>
+                    <h3>Spring 2024</h3>
+                    <ul>
+                        <li>Welcome new and returning lab members: <b>Skye Bates, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Sarah Stevenson,</b> and <b>Serena Wang</b>!</li>
+                        <li>Congratulations to <b>Skye Bates, Gianna LaMena,</b> and <b>Serena Wang</b> on their graduation!</li>
+                        <li><b>Gianna LaMena</b> presented her honors thesis.</li>
+                        <li>Congratulations to <b>Dr. Laura Wolter</b> on her dissertation defense!</li>
+                    </ul>
+                    <img src="images/Laura dissertation.jpg" alt="Dr. Laura Wolter celebrating her dissertation defense" style="max-width: 400px; margin: 1em 0; display:block;">
+                </div>
+
+                <!-- Fall 2023 -->
+                <div>
+                    <h3>Fall 2023</h3>
+                    <ul>
+                        <li>Congratulations to <b>Gavin Fox</b> on having a poster accepted for the 2024 SPSP Annual Convention!</li>
+                        <li>Congratulations to <b>Gianna LaMena</b> for receiving the Strohl Research Grant!</li>
+                        <li>Welcome new and returning lab members: <b>Skye Bates, Nessia Crispe, Ryan Gross, Sarah Jacobs, Gianna LaMena, Madison Lebowitz, Maeve McGowan, Serena Wang,</b> and <b>Cammie Wylie</b>!</li>
+                        <li>Congratulations to <b>Gavin Fox</b> on approval of their Master thesis proposal.</li>
+                    </ul>
+                </div>
+
+                <!-- Summer 2023 -->
+                <div>
+                    <h3>Summer 2023</h3>
+                    <ul>
+                        <li>Well done to <b>Gabby Maramag, Laura Wolter,</b> and <b>Gavin Fox</b> on presenting their work at RSA 46th Annual Meeting.</li>
+                        <li>Welcome new lab members: <b>Ryan Gross</b> and <b>Serena Wang</b>!</li>
+                    </ul>
+                </div>
+
+                <!-- Spring 2023 -->
+                <div>
+                    <h3>Spring 2023</h3>
+                    <ul>
+                        <li>Congratulations to <b>Elisa Lipkin</b> for graduating from Lehigh University with her Bachelor's in Pre-Dental Science!</li>
+                        <li>Congratulations to <b>Gabby Maramag</b> for graduating from Kutztown University!</li>
+                        <li>Congratulations to <b>Nicole Jacobs</b> for graduating from Lehigh University with her Bachelor's degree in Psychology!</li>
+                        <li><b>Nessia Crispe</b> presented her honors project.</li>
+                        <li><b>Elisa Lipkin</b> was accepted into Penn Dental Medicine's DMD Program at the University of Pennsylvania!</li>
+                        <li>Congratulations to <b>Laura Wolter</b> on the publication of her paper on bystander norms in <i>Psychology of Violence</i>!</li>
+                        <li><b>Maeve McGowan</b> was awarded the Gold-Hansen Trophy by the music department.</li>
+                        <li><b>Gianna LaMena</b> was awarded a paid research assistantship at Mountaintop Campus in Dr. Sarah Borowski's lab.</li>
+                        <li>Congratulations to <b>Nessia Crispe</b> for being awarded the Strohl Research Grant!</li>
+                        <li><b>Gabby Maramag</b> accepted a job as post-bacc lab manager at the University of Michigan.</li>
+                        <li><b>Nicole Jacobs</b> presented her honors project.</li>
+                        <li><b>Clarissa Chun</b> presented her research on space and belonging at the Lehigh Student Affairs Assessment Symposium.</li>
+                        <li><b>Laura Wolter, Gabby Maramag,</b> and <b>Nicole Jacobs</b> presented at SPSP Annual Convention in Atlanta, GA.</li>
+                        <li>Welcome new lab members: <b>Maeve McGowan</b> and <b>Sarah Jacobs</b>!</li>
+                    </ul>
+                </div>
+
+                <!-- Fall 2022 -->
+                <div>
+                    <h3>Fall 2022</h3>
+                    <ul>
+                        <li>Welcome <b>Gavin Fox</b> to the lab as a first-year PhD student!</li>
+                        <li>Welcome new and returning lab members: <b>Skye Bates, Thomas Stoughton, Cammie Wylie, Elisa Lipkin,</b> and <b>Gianna LaMena</b>!</li>
+                    </ul>
+                </div>
+
+                <!-- Summer 2022 -->
+                <div>
+                    <h3>Summer 2022</h3>
+                    <ul>
+                        <li>Welcome new lab member: <b>Gabby Maramag</b>!</li>
+                        <li><b>Laura Wolter</b> presented her work at the Research Society on Alcoholism (RSA) Annual Convention in Orlando, FL.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
 </div>
 
 <!-- Scripts -->
@@ -309,7 +305,20 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
+<!-- Sidebar toggle script -->
+<script>
+document.querySelectorAll('#sidebar .opener').forEach(opener => {
+    opener.addEventListener('click', () => {
+        const submenu = opener.nextElementSibling;
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
+    });
+});
+</script>
+
 </body>
 </html>
-
 
