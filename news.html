@@ -7,13 +7,47 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="shortcut icon" href="favicon.ico" />
     <style>
-        /* Constrain images in the news section */
+        /* Sidebar layout */
+        #wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #sidebar {
+            width: 250px;
+            min-width: 200px;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        #main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        /* Constrain images in news section */
         .news-image img {
-            max-width: 100%;
+            max-width: 400px; /* smaller photo */
             height: auto;
             display: block;
             margin: 1em 0;
         }
+
+        /* Optional: make the menu links easier to see */
+        #menu ul li a {
+            display: block;
+            padding: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+
+        #menu ul li span.opener {
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            padding: 5px 0;
+        }
+
     </style>
 </head>
 <body class="is-preload">
